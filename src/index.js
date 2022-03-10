@@ -1,9 +1,10 @@
 import "./css/style.css"
 import backgroundImage from "./assets/background.jpg"
+import App from "./classes/app"
 
 
-const img = document.createElement("img")
+const app = new App()
 
-img.src = backgroundImage
+const body = document.querySelector("body")
+body.prepend(app.element)
 
-document.body.append(img)
